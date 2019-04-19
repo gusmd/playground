@@ -3,4 +3,6 @@ project(playground_embed)
 
 add_executable(playground_embed src/main.cpp)
 
-target_link_libraries(playground_embed PRIVATE pybind11::module)
+find_package(pybind11 REQUIRED)
+
+target_link_libraries(playground_embed PRIVATE pybind11::embed)
